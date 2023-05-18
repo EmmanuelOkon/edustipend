@@ -1,7 +1,11 @@
 import Layout from "../../components/layout/layoutComponent";
 
 const Home = () => {
-  return <Layout />;
+  return (
+    <>
+      <Layout />
+    </>
+  );
 };
 
 export default Home;

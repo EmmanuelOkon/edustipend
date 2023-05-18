@@ -1,36 +1,26 @@
 import styled from "styled-components";
 
 export const BaseButton = styled.button`
-  min-width: 165px;
-  width: 100%;
-  height: 50px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 0 35px;
-  font-size: 15px;
-  background-color: #003f7d;
-  color: white;
-  font-weight: bolder;
-  border: none;
-  border-radius: 4px;
+  padding: 6px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
+  color: black;
+  border-radius: 6px;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: 300ms ease-in-out all;
 
   &:hover {
-    background-color: #002347;
+    background-color: #f2f2f2;
   }
 `;
 
 export const InvertedButton = styled(BaseButton)`
-  background-color: #00172f;
-  color: white;
+  background-color: #f6c605;
+  color: black;
+  border: 1px solid black;
 
   &:hover {
-    background-color: #003569;
-    color: white;
-    border: none;
+    background: #ddb204;
   }
 `;

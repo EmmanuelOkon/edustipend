@@ -1,50 +1,78 @@
 import React from "react";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/buttonComponent";
+import { HiPlusSm } from "react-icons/hi";
 
 const categories = [
   {
     id: 1,
-    title: "hats",
-    imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
-    route: "shop/hats",
+    title: "Unavailable by",
+    text: "Davido",
+    icon: HiPlusSm,
   },
   {
     id: 2,
-    title: "jackets",
-    imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-    route: "shop/jackets",
+    title: "Unavailable by",
+    text: "Davido",
+    icon: HiPlusSm,
   },
   {
     id: 3,
-    title: "sneakers",
-    imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-    route: "shop/sneakers",
+    title: "Unavailable by",
+    text: "Davido",
+    icon: HiPlusSm,
   },
   {
     id: 4,
-    title: "womens",
-    imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-    route: "shop/womens",
+    title: "Unavailable by",
+    text: "Davido",
+    icon: HiPlusSm,
   },
   {
     id: 5,
-    title: "mens",
-    imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-    route: "shop/mens",
+    title: "Unavailable by",
+    text: "Davido",
+    icon: HiPlusSm,
   },
 ];
 
-const Directory = () => {
+const Layout = () => {
   return (
-    <div className="w-full relative top-[2rem] bg-rd-900 flex flex-wrap gap-5 justify-between py-[10px] px-[30px] ">
-      {categories.map((category) => (
-        <div
-          className="h-[240px] flex w-[300px] bg-slate-700 "
-          key={category.id}
-          category={category}
-        />
-      ))}
+    <div className="flex relative top-[2rem] px-[30px]  py-[25px] g-black gap-4">
+      <div className="w-full flex items-center">
+        <div className="pl-[30px] ">
+          <h1 className="text-6xl font-bold text-black">
+            Make your party fun!
+          </h1>
+          <p className="py-4 tracking-widest text-xl ">
+            Create your own custom playlist today.
+          </p>
+          <Button buttonType={BUTTON_TYPE_CLASSES.inverted}>
+            Create playlist
+          </Button>
+        </div>
+      </div>
+      <div className="w-full flex justify-end">
+        <div className="text-end bg-gray-700 bg-opacity-70 px-8 py-[20px] ">
+          <div className=" py-[10px] px[30px] text-center ">
+            <h1 className="text-2xl font-bold">Trending songs</h1>
+            {categories.map((category) => (
+              <div
+                className="flex my-6 w-full justify-center "
+                key={category.id}
+              >
+                <button className="bg-white flex items-center px-10 py-3 text-enter border border-black rounded-[6px]">
+                  <p>{category.title}</p>
+                  <p className="pl-1 italic">{category.text}</p>
+                  <category.icon />
+                </button>
+              </div>
+            ))}
+            <Button buttonType={BUTTON_TYPE_CLASSES.inverted}>View more</Button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Directory;
+export default Layout;
