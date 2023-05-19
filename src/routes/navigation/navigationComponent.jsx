@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Button, {
   BUTTON_TYPE_CLASSES,
-} from "../../components/button/buttonComponent";
+} from "../../components/core/button/buttonComponent";
 
 const Navigation = () => {
   return (

@@ -37,13 +37,13 @@ const categories = [
 
 const Layout = () => {
   return (
-    <div className="flex relative top-[2rem] px-[30px]  py-[25px] g-black gap-4">
+    <div className="flex relative top-[2rem] px-[30px]  py-[25px] gap-4">
       <div className="w-full flex items-center">
-        <div className="pl-[30px] ">
+        <div className="pl-[30px]">
           <h1 className="text-6xl font-bold text-black">
             Make your party fun!
           </h1>
-          <p className="py-4 tracking-widest text-xl ">
+          <p className="py-4 tracking-widest text-xl">
             Create your own custom playlist today.
           </p>
           <Button buttonType={BUTTON_TYPE_CLASSES.inverted}>
@@ -52,19 +52,19 @@ const Layout = () => {
         </div>
       </div>
       <div className="w-full flex justify-end">
-        <div className="text-end bg-gray-700 bg-opacity-70 px-8 py-[20px] ">
-          <div className=" py-[10px] px[30px] text-center ">
+        <div className="text-end bg-gray-700 bg-opacity-70 px-14 py-[20px]">
+          <div className=" py-[10px] px[30px] text-center">
             <h1 className="text-2xl font-bold">Trending songs</h1>
             {categories.map((category) => (
               <div
-                className="flex my-6 w-full justify-center "
+                className="flex my-6 w-full justify-center"
                 key={category.id}
               >
-                <button className="bg-white flex items-center px-10 py-3 text-enter border border-black rounded-[6px]">
+                <Button className="flex items-center">
                   <p>{category.title}</p>
                   <p className="pl-1 italic">{category.text}</p>
                   <category.icon />
-                </button>
+                </Button>
               </div>
             ))}
             <Button buttonType={BUTTON_TYPE_CLASSES.inverted}>View more</Button>
