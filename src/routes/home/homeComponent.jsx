@@ -1,9 +1,9 @@
-import Layout from "../../components/core/layout/layoutComponent";
+import CardWrapper from "../../components/core/card/cardWrapperComponent";
 
 const Home = () => {
   return (
     <>
-      <Layout />
+      <CardWrapper />
     </>
   );
 };

@@ -1,41 +1,36 @@
 import React from "react";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/buttonComponent";
-import { HiPlusSm } from "react-icons/hi";
+import CardItems from "./cardItems";
 
 const cardItems = [
   {
     id: 1,
     title: "Unavailable by",
     text: "Davido",
-    icon: HiPlusSm,
   },
   {
     id: 2,
     title: "Unavailable by",
     text: "Davido",
-    icon: HiPlusSm,
   },
   {
     id: 3,
     title: "Unavailable by",
     text: "Davido",
-    icon: HiPlusSm,
   },
   {
     id: 4,
     title: "Unavailable by",
     text: "Davido",
-    icon: HiPlusSm,
   },
   {
     id: 5,
     title: "Unavailable by",
     text: "Davido",
-    icon: HiPlusSm,
   },
 ];
 
-const Layout = () => {
+const CardWrapper = () => {
   return (
     <div className="flex relative top-[2rem] px-[30px]  py-[25px] gap-4">
       <div className="w-full flex items-center">
@@ -56,13 +51,7 @@ const Layout = () => {
           <div className=" py-[10px] px[30px] text-center">
             <h1 className="text-2xl font-bold">Trending songs</h1>
             {cardItems.map((item) => (
-              <div className="flex my-6 w-full justify-center" key={item.id}>
-                <Button className="flex items-center">
-                  <p>{item.title}</p>
-                  <p className="pl-1 italic">{item.text}</p>
-                  <item.icon />
-                </Button>
-              </div>
+              <CardItems key={item.id} title={item.title} text={item.text} />
             ))}
             <Button buttonType={BUTTON_TYPE_CLASSES.inverted}>View more</Button>
           </div>
@@ -72,4 +61,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default CardWrapper;

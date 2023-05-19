@@ -4,7 +4,7 @@ import Button, {
   BUTTON_TYPE_CLASSES,
 } from "../../components/core/button/buttonComponent";
 
-const Navigation = () => {
+const Header = () => {
   return (
     <>
       <div className="flex justify-between items-center py-3 bg-white border border-black rounded-lg mx-auto sticky px-4  w-[1300px] top-6 z-10 ">
@@ -23,4 +23,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Header;
