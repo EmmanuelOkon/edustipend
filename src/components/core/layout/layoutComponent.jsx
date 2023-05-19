@@ -2,7 +2,7 @@ import React from "react";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/buttonComponent";
 import { HiPlusSm } from "react-icons/hi";
 
-const categories = [
+const cardItems = [
   {
     id: 1,
     title: "Unavailable by",
@@ -55,15 +55,12 @@ const Layout = () => {
         <div className="text-end bg-gray-700 bg-opacity-70 px-14 py-[20px]">
           <div className=" py-[10px] px[30px] text-center">
             <h1 className="text-2xl font-bold">Trending songs</h1>
-            {categories.map((category) => (
-              <div
-                className="flex my-6 w-full justify-center"
-                key={category.id}
-              >
+            {cardItems.map((item) => (
+              <div className="flex my-6 w-full justify-center" key={item.id}>
                 <Button className="flex items-center">
-                  <p>{category.title}</p>
-                  <p className="pl-1 italic">{category.text}</p>
-                  <category.icon />
+                  <p>{item.title}</p>
+                  <p className="pl-1 italic">{item.text}</p>
+                  <item.icon />
                 </Button>
               </div>
             ))}
